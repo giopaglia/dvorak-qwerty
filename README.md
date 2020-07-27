@@ -61,5 +61,6 @@ Change scan-codes
 ------
 
 **Warning! The following feature is untested on this repository.**
-I ported the original code, but disabled it by making it a new, unused set of symbols (see *evdev-dvq* in [xkb-data-mod/symbols/inet](xkb-data-mod/symbols/inet)). To make it work, that would be a TODO, any volunteer? =)
 If interested, please refer back to [ZeptByteS' original repo](https://github.com/ZeptByteS/dvorak-qwerty/tree/develop).
+
+I ported here the original code, but disabled it by making it a new, unused set of symbols (see *evdev-dvq* in [xkb-data-mod/symbols/inet](xkb-data-mod/symbols/inet)). To make it work, that's a TODO. Any help is welcome =)
