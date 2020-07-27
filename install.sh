@@ -1,6 +1,6 @@
 #/bin/bash
 
-NAME=xkb-backup.tar.gz
+NAME=xkb-backup-$(date +%Y-%m-%d-%H.%M.%S).tar.gz
 CONF=/usr/share/X11/xkb
 
 
@@ -11,13 +11,13 @@ then
    exit 1
 fi
 
-
 echo "Backing up current configuration in $PWD/$NAME"
-tar zcf $NAME /usr/share/X11/xkb --absolute-names
+tar zcf $NAME $CONF --absolute-names
 DIRECTORY_OWNER=$(namei -o $PWD | tail -n 1 | awk '{if ($2) print $2}')
 chown $DIRECTORY_OWNER -R $NAME
 
-echo "Copying Dvorak-Qwerty configuration"
-cp -R ./types ./symbols/ ./rules/  $CONF
+echo "Apply patch containing Dvorak-Qwerty configuration"
+diff -Nar -C50 xkb-data-orig xkb-data-mod > file.patch
+patch -p1 -d $CONF < file.patch
 
 exit 0
