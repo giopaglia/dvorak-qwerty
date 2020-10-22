@@ -16,7 +16,7 @@ tar zcf $NAME $CONF --absolute-names
 DIRECTORY_OWNER=$(namei -o $PWD | tail -n 1 | awk '{if ($2) print $2}')
 chown $DIRECTORY_OWNER -R $NAME
 
-echo "Apply patch containing Dvorak-Qwerty configuration"
+echo "Applying patch containing Dvorak-Qwerty configuration"
 diff -Nar -C50 xkb-data-orig xkb-data-mod > file.patch
 patch -p1 -d $CONF < file.patch
 
