@@ -13,7 +13,7 @@ Currently, the original installation process performs a "hard" file overwriting,
 give up new features of XKB. Instead, the installation process here just applies a diff-patch,
 which is comparatively safer and makes this feature "timeless".
 Note that the original project also has a more advanced feature, which I didn't bother to test here.
-If interested, see the [original develop branch](https://github.com/ZeptByteS/dvorak-qwerty/tree/develop).
+If interested, visit the [original develop branch](https://github.com/ZeptByteS/dvorak-qwerty/tree/develop).
 
 
 Installation
